@@ -1,0 +1,14 @@
+<%= form_tag('https://obscure-anchorage-52573.herokuapp.com/post', method: 'post') do %>
+  <%= select_tag(:prompt, options_for_select([
+    ['We Are', 'We Are'],
+    ['I am', 'I am'],
+    ['I will be', 'I will be'],
+    ['I believe', 'I believe'],
+    ['I feel', 'I feel'],
+    ['I am a Proud', 'I am a Proud'],
+    ['I value', 'I value'],
+    ['I love', 'I love'],
+  ]))%>
+  <%= text_field_tag(:message) %>
+  <%= submit_tag("Share the Love") %>
+<% end %>
