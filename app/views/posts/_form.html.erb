@@ -1,4 +1,4 @@
-<%= form_tag('https://obscure-anchorage-52573.herokuapp.com/post', method: 'post') do %>
+<%= form_tag('/posts', method: 'post', remote: true) do %>
   <%= select_tag(:prompt, options_for_select([
     ['We Are', 'We Are'],
     ['I am', 'I am'],

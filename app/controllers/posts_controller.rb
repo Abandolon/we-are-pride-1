@@ -2,9 +2,23 @@ class PostsController < ApplicationController
   require 'net/http'
   require 'json'
   require 'open-uri'
+  require 'net/https'
 
   def create
-    binding.pry
+    post = Post.new(
+      prompt: params[:prompt],
+      message: params[:message]
+    )
+
+    uri = URI('https://obscure-anchorage-52573.herokuapp.com/post')
+    req = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json')
+    req.body = post.to_json
+    res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+      http.request(req)
+
+    redirect_back fallback_location: posts_path
+    end
+
   end
 
   def index
