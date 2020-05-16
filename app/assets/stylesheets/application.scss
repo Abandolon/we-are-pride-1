@@ -11,3 +11,28 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import 'posts/index';
+
+
+header {
+  margin: 15px 0;
+}
+.container {
+  width: 85vw;
+  margin: 20px auto;
+  padding: 0px;
+  background: transparent;
+}
+
+.image-warm {
+  position: absolute;
+  left: 47.2%;
+  right: -20.27%;
+  top: 37.68%;
+  bottom: 24.51%;
+  z-index: -10;
+  background: linear-gradient(180deg, #D50593 -2.63%, #FF9500 87.04%);
+  filter: blur(65.1097px);
+}
+

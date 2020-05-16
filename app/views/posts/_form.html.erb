@@ -1,14 +1,16 @@
 <%= form_tag('/posts', method: 'post', remote: true) do %>
-  <%= select_tag(:prompt, options_for_select([
+  <%= select_tag :prompt, options_for_select([
     ['We Are', 'We Are'],
     ['I am', 'I am'],
     ['I will be', 'I will be'],
     ['I believe', 'I believe'],
     ['I feel', 'I feel'],
-    ['I am a Proud', 'I am a Proud'],
+    ["I'm Proud", "I'm Proud"],
     ['I value', 'I value'],
     ['I love', 'I love'],
-  ]))%>
-  <%= text_field_tag(:message) %>
-  <%= submit_tag("Share the Love") %>
-<% end %>
+  ]), {:class => 'form-dropdown'}%>
+  <%= text_area_tag :message, "", class:'form-message-field' %>
+  <%= submit_tag("Share the Love", class:'submit-btn') %>
+  <% end %>
+
+

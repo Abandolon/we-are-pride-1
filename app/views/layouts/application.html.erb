@@ -10,8 +10,13 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <%= yield %>
+    <div class="container">
+      <header class="text-center">wearepride.org</header>
+      <div class="divider-line"></div>
+      <div class="image-warm"></div>
+      <%= yield %>
 
-    <%= javascript_pack_tag 'application' %>
+      <%= javascript_pack_tag 'application' %>
+    </div>
   </body>
 </html>

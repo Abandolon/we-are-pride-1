@@ -1,11 +1,9 @@
-<h1>
-  Posts
-</h1>
+<%= render 'post_menu' %>
+<div class="announcement">
+  <h3>tell us who you are, what you're fighting for, your dreams,
+  your pride, and how you celebrate.</h3>
+</div>
 
-<ul>
-  <% @posts.each do |post| %>
-  <%= post.message %>
-  <% end %>
-</ul>
-
-<%= render "form" %>
+<div class="form-container">
+  <%= render 'form' %>
+</div>
