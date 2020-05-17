@@ -1,9 +1,29 @@
 <%= render 'post_menu' %>
+<div class="image-cool"></div>
 <div class="announcement">
-  <h3>tell us who you are, what you're fighting for, your dreams,
-  your pride, and how you celebrate.</h3>
+  <h3>the latest LGBT voices from around the globe</h3>
 </div>
 
-<div class="form-container">
-  <%= render 'form' %>
+<div class="card-container">
+  <% @posts.order('timestamp DESC').each do |post| %>
+    <div class="post-card">
+      <div class="post-message">
+        <strong><%= post.prompt %></strong> <%= post.message %>
+      </div>
+      <a href="#">translate</a>
+      <div class="post-footer">
+        <div class="post-time">
+          <%= time_ago_in_words(post.timestamp) %>
+        </div>
+        <div class="alrign-right">
+          <a href="#">share</a>
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="main-btn">
+  <%= link_to "Post", new_post_path, class:"btn-link" %>
 </div>

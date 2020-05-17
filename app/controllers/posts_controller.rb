@@ -20,8 +20,8 @@ class PostsController < ApplicationController
   end
 
   def index
-    Post.destroy_all
-    parse_results
+    # Post.destroy_all
+    # parse_results
     @posts = Post.all
   end
 

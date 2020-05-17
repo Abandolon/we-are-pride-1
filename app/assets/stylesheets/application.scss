@@ -36,3 +36,14 @@ header {
   filter: blur(65.1097px);
 }
 
+.image-cool {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 28.65%;
+  bottom: 19.7%;
+  z-index: -10;
+  background: #0047FF;
+  filter: blur(87.8313px);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
